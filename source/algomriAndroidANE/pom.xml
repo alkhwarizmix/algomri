@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+////////////////////////////////////////////////////////////////////////////////
+//  بسم الله الرحمن الرحيم
+//
+//  حقوق التأليف والنشر ١٤٣٨ هجري، فارس بلحواس (Copyright 2016 Fares Belhaouas)  
+//  كافة الحقوق محفوظة (All Rights Reserved)
+//
+//  NOTICE: Fares Belhaouas permits you to use, modify, and distribute this file
+//  in accordance with the terms of the license agreement accompanying it.
+//
+////////////////////////////////////////////////////////////////////////////////
+--><!---
+/**
+ *  <p>
+ *  TODO:
+ *  </p>
+ * 
+ *  @author فارس بلحواس (Fares Belhaouas)
+ *  @since ٠٣ ربيع الثاني ١٤٣٨ (December 31, 2016)
+ */
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>dz.alkhwarizmix.algomri</groupId>
+		<artifactId>algomri</artifactId>
+		<version>0.0.1.FBEL</version>
+	</parent>
+
+	<artifactId>AlGomriAndroidANE</artifactId>
+	<packaging>jar</packaging>
+	<name>AlGomriAndroidANE Maven JAR</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<com.adobe.fre.version>24.0.0</com.adobe.fre.version>
+		<org.mockito.version>1.10.19</org.mockito.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.adobe.fre</groupId>
+			<artifactId>FlashRuntimeExtensions</artifactId>
+			<version>${com.adobe.fre.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.android</groupId>
+			<artifactId>android</artifactId>
+			<version>4.1.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>${org.mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>AlGomriAndroidANE</finalName>
+		<!-- <filters> <filter>${filter1}</filter> </filters> -->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>true</downloadJavadocs>
+					<sourceExcludes>
+						<sourceExclude>**/.svn/**</sourceExclude>
+					</sourceExcludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+////////////////////////////////////////////////////////////////////////////////
+//  بسم الله الرحمن الرحيم
+//
+//  حقوق التأليف والنشر ١٤٣٨ هجري، فارس بلحواس (Copyright 2016 Fares Belhaouas)
+//  كافة الحقوق محفوظة (All Rights Reserved)
+//
+//  NOTICE: Fares Belhaouas permits you to use, modify, and distribute this file
+//  in accordance with the terms of the license agreement accompanying it.
+//
+////////////////////////////////////////////////////////////////////////////////
+--><!---
+/**
+ *  <p>
+ *  TODO:
+ *  </p>
+ * 
+ *  @author فارس بلحواس (Fares Belhaouas)
+ *  @since ٠٣ ربيع الثاني ١٤٣٨ (December 31, 2016)
+ */
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>dz.alkhwarizmix</groupId>
+		<artifactId>alkhwarizmix-common</artifactId>
+		<version>0.5.12.FBEL</version>
+	</parent>
+
+	<groupId>dz.alkhwarizmix.algomri</groupId>
+	<artifactId>algomri</artifactId>
+	<version>0.0.1.FBEL</version>
+	<packaging>pom</packaging>
+	
+	<name>algomri Maven</name>
+	<description></description>
+
+	<modules>
+		<module>algomriAndroidANE</module>
+	</modules>
+</project>

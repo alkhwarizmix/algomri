@@ -63,12 +63,19 @@
 
 	<build>
 		<finalName>AlGomriAndroidANE</finalName>
-		<!-- <filters> <filter>${filter1}</filter> </filters> -->
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.0</version>
+				<version>3.6.0</version>
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>
@@ -79,13 +86,42 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.7</version>
+				<version>2.10</version>
 				<configuration>
 					<downloadSources>true</downloadSources>
 					<downloadJavadocs>true</downloadJavadocs>
 					<sourceExcludes>
 						<sourceExclude>**/.svn/**</sourceExclude>
 					</sourceExcludes>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<artifactItems>
+						<artifactItem>
+							<groupId>com.adobe.fre</groupId>
+							<artifactId>FlashRuntimeExtensions</artifactId>
+							<version>${com.adobe.fre.version}</version>
+							<type>jar</type>
+							<outputDirectory>${project.build.directory}/classes/libs</outputDirectory>
+						</artifactItem>
+					</artifactItems>
+					<outputDirectory>${project.build.directory}/classes/libs</outputDirectory>
+					<overWriteReleases>false</overWriteReleases>
+					<overWriteSnapshots>true</overWriteSnapshots>
 				</configuration>
 			</plugin>
 		</plugins>
